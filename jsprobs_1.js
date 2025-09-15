@@ -36,6 +36,8 @@ area(3, -6);
 //at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
 //at node:internal/main/run_main_module:36:49
 
+//---> check if the number is odd or even
+
 const rem = (a) => {
   if (a % 2 === 0) {
     console.log("even");
@@ -71,5 +73,29 @@ const small = (a, b, c) => {
 
 small(20, 55, 100);
 
+console.log(Math.min(77, 5, 8)); //-----built in module
+
 //output
 //c is the largest
+
+//---> printing the smallest of 3 numbers
+
+//method 1(using arrays built in functions)
+
+const strrev = (str) => {
+  return str.split("").reverse().join("");
+};
+
+console.log(strrev("allabb"));
+
+//method 2
+
+const strr = (str2) => {
+  let result = "";
+  for (let i = str2.length - 1; i >= 0; i--) {
+    result = result + str2[i];
+  }
+  return result;
+};
+
+console.log(strr("abcd"));
