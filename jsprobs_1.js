@@ -92,10 +92,19 @@ console.log(strrev("allabb"));
 
 const strr = (str2) => {
   let result = "";
-  for (let i = str2.length - 1; i >= 0; i--) {
-    result = result + str2[i];
+  if (typeof str2 === "string") {
+    for (let i = str2.length - 1; i >= 0; i--) {
+      result = result + str2[i];
+    }
+  } else {
+    throw new Error("nothing apart from strings are allowed");
   }
+
   return result;
 };
+console.log("the reversed string is:", strr("hello"));
+console.log(strr("45566"));
 
-console.log(strr("abcd"));
+//output
+//the reversed string is: olleh
+//66554
