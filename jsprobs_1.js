@@ -122,3 +122,92 @@ console.log(fact(10));
 
 //output
 //3628800
+
+//---> find if the year entered in a leap year pr not
+//method 1
+
+function leap(year) {
+  if ((year % 4 === 0 && year % 100 === 0) || year % 400 === 0) {
+    console.log("it is a leap year");
+  } else {
+    console.log("it is not a leap year");
+  }
+}
+
+leap(2000);
+leap(2023);
+
+//method 2
+
+function leapy(year) {
+  return (year % 4 === 0 && year % 100 === 0) || year % 400 === 0
+    ? "yes"
+    : "no";
+}
+
+console.log(leapy(2000));
+console.log(leapy(2023));
+
+//output
+//it is a leap year
+//it is not a leap year
+
+//---> wap to calculate the sum of each digits of the number eg:12=1+2
+
+function dig(num) {
+  const str = num.toString();
+  const arr = str.split(""); // ["2","3"]
+
+  console.log(arr);
+  let sum = 0;
+  arr.forEach((element) => {
+    console.log(parseInt(element));
+    sum = sum + parseInt(element);
+  });
+  return sum;
+}
+
+console.log(dig(45621));
+
+//output
+//[ '4', '5', '6', '2', '1' ]
+// 18
+
+//--->generate a multiplication table
+
+function tables(num, limit) {
+  for (let i = 1; i <= limit; i++) {
+    console.log(`${num} x ${i} = ${num * i}`);
+  }
+}
+
+tables(4, 10);
+
+//output
+// 4 x 1 = 4
+// 4 x 2 = 8
+// 4 x 3 = 12
+// 4 x 4 = 16
+// 4 x 5 = 20
+// 4 x 6 = 24
+// 4 x 7 = 28
+// 4 x 8 = 32
+// 4 x 9 = 36
+// 4 x 10 = 40
+
+//---> find the largest element of the array
+//using sort function
+
+function getLargest(arr) {
+  arr.sort((a, b) => b - a); // descending order
+  return arr[0]; // first element is the largest
+}
+
+console.log(getLargest([10, 3, 45, 7, 99, 23]));
+
+//output
+//99
+
+//using
+
+console.log(Math.max(10, 3, 45, 7, 99, 23));
