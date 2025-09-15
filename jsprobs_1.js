@@ -108,3 +108,17 @@ console.log(strr("45566"));
 //output
 //the reversed string is: olleh
 //66554
+
+//----> function to calculate factorial of a number
+
+const fact = (num) => {
+  let buck = 1;
+  for (let i = num; i >= 1; i--) {
+    buck = buck * i;
+  }
+  return buck;
+};
+console.log(fact(10));
+
+//output
+//3628800
